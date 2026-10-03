@@ -1,0 +1,5 @@
+hypothesis,description,median_error_deg,min_error_deg
+abs,"정책 출력을 절대 축각으로 사용",160.41,154.95
+plus_state,"출력 + 현재 상태 회전 (상대값 가정)",21.15,17.34
+unnorm,"출력 x std + mean (역정규화)",8.56,4.70
+hold,"현재 자세 유지 (지금 쓰는 방식)",0.82,

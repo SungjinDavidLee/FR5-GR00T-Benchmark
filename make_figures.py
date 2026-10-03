@@ -134,7 +134,7 @@ def fig_slide(T):
     S = [t["slide_mm"] for t in T if t["verdict"] == "s" and t["slide_mm"] != ""]
     F = [t["slide_mm"] for t in T if t["verdict"] == "f" and t["slide_mm"] != ""]
     fig, (a1, a2) = plt.subplots(1, 2, figsize=(7.4, 3.0), gridspec_kw={"width_ratios": [1, 1.3]})
-    bp = a1.boxplot([S, F], labels=["success", "failure"], widths=0.5, patch_artist=True,
+    bp = a1.boxplot([S, F], tick_labels=["success", "failure"], widths=0.5, patch_artist=True,
                     medianprops=dict(color=INK, linewidth=1.2))
     for patch, c in zip(bp["boxes"], [GREEN, RED]):
         patch.set_facecolor(c); patch.set_alpha(0.35); patch.set_edgecolor(c)
